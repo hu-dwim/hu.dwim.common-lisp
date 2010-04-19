@@ -10,8 +10,7 @@
 
 (let ((package (find-package :hu.dwim.common-lisp))
       ;; TODO: add get, but is used at several places currently
-      (shadowed-symbols '(time
-                          set)))
+      (shadowed-symbols '(set)))
   (do-external-symbols (symbol (find-package :common-lisp))
     (unless (member symbol shadowed-symbols)
       ;; do take care of the symbol nil: (list nil)!
