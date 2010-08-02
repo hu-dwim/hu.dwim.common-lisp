@@ -6,7 +6,7 @@
 
 (in-package :hu.dwim.common-lisp.documentation)
 
-(def project :hu.dwim.common-lisp :path (system-pathname :hu.dwim.common-lisp))
+(def project :hu.dwim.common-lisp)
 
 (def book user-guide (:title "User guide")
   (chapter (:title "Introduction")
