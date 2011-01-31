@@ -11,7 +11,7 @@
 (defsystem :hu.dwim.common-lisp.documentation
   :class hu.dwim.documentation-system
   :depends-on (:hu.dwim.common-lisp
-               :hu.dwim.wui)
+               :hu.dwim.presentation)
   :components ((:module "documentation"
                 :components ((:file "common-lisp" :depends-on ("package"))
                              (:file "package")))))
