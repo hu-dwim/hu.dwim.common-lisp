@@ -9,11 +9,11 @@
 (defpackage :hu.dwim.common-lisp)
 
 (let ((package (find-package :hu.dwim.common-lisp))
-      ;; TODO: add get, but is used at several places currently
+      ;; TODO: add get, but it is used at several places currently
       (shadowed-symbols '(set)))
   (do-external-symbols (symbol (find-package :common-lisp))
     (unless (member symbol shadowed-symbols)
-      ;; do take care of the symbol nil: (list nil)!
+      ;; handle the symbol NIL by using (list nil)
       (let ((symbol (or symbol (list nil))))
         (import symbol package)
         (export symbol package)))))
